@@ -1,0 +1,100 @@
+html{
+	height: 100%;
+}
+body{
+	margin: 0;
+	height: 100%;
+	background: #3E4549;
+}
+nav{
+	height: 150px;
+	background: #2B3033;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+}
+input{
+	background: #2B3033;
+	margin: 0 40px;
+	padding: 20px 30px;
+	border-radius: 10px;
+	font-size: 24px;
+}
+input:focus{
+	outline: none;
+}
+input[value="Add message"]{
+	border: 3px solid #38C8E0;
+	color: #38C8E0;
+}
+input[value="Add warning"]{
+	border: 3px solid #F98253;
+	color: #F98253;
+}
+input[value="Add error"]{
+	border: 3px solid rgb(197, 77, 67);
+	color: rgb(197, 77, 67);
+}
+input[value="Add message"]:hover{
+	background: #38C8E0;
+	color: #2B3033;
+}
+input[value="Add warning"]:hover{
+	background: #F98253;
+	color: #2B3033;
+}
+input[value="Add error"]:hover{
+	background: rgb(197, 77, 67);
+	color: #2B3033;
+}
+section{
+	height: 100%;
+	width: 400px;	
+	z-index: 0;
+	bottom: 0;
+	right: 0;
+	position: fixed;
+}
+ul{
+	padding: 0;
+	bottom: 0;
+	position: absolute;
+}
+li{
+	list-style-type: none;
+	width: 320px;
+	background: #fff;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	color: #fff;
+	font-family: sans-serif;
+	opacity: 1;
+	-webkit-animation: appear 1s ease-out;
+	-webkit-transition: all 1s ease-out;
+}
+.Message{
+	background: #38C8E0;
+}
+.Warning{
+	background: #F98253;
+}
+.Error{
+	background: rgb(197, 77, 67);
+}
+@-webkit-keyframes appear{
+	0% { -webkit-transform: translateY(100%) scaleX(0.5); }
+	30%{ -webkit-transform: translateY(-8%) scaleX(0.5); }	
+	40%{ -webkit-transform: translateY(2%) scaleX(0.5); }
+	50%{ -webkit-transform: translateY(0%) scaleX(1.1); }
+	60%{ -webkit-transform: scaleX(0.9); }
+	70% { -webkit-transform: scaleX(1.05); }			
+	80%{ -webkit-transform: scaleX(0.95); }
+	90%{ -webkit-transform: scaleX(1.02); }	
+	100%{ -webkit-transform: scaleX(1); }
+}
+.hide{
+	opacity: 0;
+}
